@@ -11,6 +11,11 @@
 		C80DD37A2AE95302006F3E7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80DD3792AE95302006F3E7F /* ContentView.swift */; };
 		C80DD37C2AE95304006F3E7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80DD37B2AE95304006F3E7F /* Assets.xcassets */; };
 		C80DD37F2AE95304006F3E7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80DD37E2AE95304006F3E7F /* Preview Assets.xcassets */; };
+		C834C4712AE9E6FC0015A3C4 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C834C46F2AE9E6FC0015A3C4 /* Main.xcdatamodeld */; };
+		C834C4732AE9E9230015A3C4 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C834C4722AE9E9230015A3C4 /* DataController.swift */; };
+		C834C4772AE9EEA90015A3C4 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C834C4762AE9EEA90015A3C4 /* SidebarView.swift */; };
+		C834C4792AE9EEC00015A3C4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C834C4782AE9EEC00015A3C4 /* DetailView.swift */; };
+		C834C47B2AE9EF7A0015A3C4 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C834C47A2AE9EF7A0015A3C4 /* Filter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,13 @@
 		C80DD3792AE95302006F3E7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C80DD37B2AE95304006F3E7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C80DD37E2AE95304006F3E7F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C834C4702AE9E6FC0015A3C4 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		C834C4722AE9E9230015A3C4 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		C834C4742AE9EDCF0015A3C4 /* Ultimate Portfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ultimate Portfolio.entitlements"; sourceTree = "<group>"; };
+		C834C4752AE9EDD70015A3C4 /* Ultimate-Portfolio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Ultimate-Portfolio-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C834C4762AE9EEA90015A3C4 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		C834C4782AE9EEC00015A3C4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		C834C47A2AE9EF7A0015A3C4 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,15 @@
 		C80DD3762AE95302006F3E7F /* Ultimate Portfolio */ = {
 			isa = PBXGroup;
 			children = (
+				C834C4752AE9EDD70015A3C4 /* Ultimate-Portfolio-Info.plist */,
+				C834C4742AE9EDCF0015A3C4 /* Ultimate Portfolio.entitlements */,
 				C80DD3772AE95302006F3E7F /* Ultimate_PortfolioApp.swift */,
+				C834C47A2AE9EF7A0015A3C4 /* Filter.swift */,
+				C834C4762AE9EEA90015A3C4 /* SidebarView.swift */,
 				C80DD3792AE95302006F3E7F /* ContentView.swift */,
+				C834C4782AE9EEC00015A3C4 /* DetailView.swift */,
+				C834C4722AE9E9230015A3C4 /* DataController.swift */,
+				C834C46F2AE9E6FC0015A3C4 /* Main.xcdatamodeld */,
 				C80DD37B2AE95304006F3E7F /* Assets.xcassets */,
 				C80DD37D2AE95304006F3E7F /* Preview Content */,
 			);
@@ -137,6 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C834C47B2AE9EF7A0015A3C4 /* Filter.swift in Sources */,
+				C834C4712AE9E6FC0015A3C4 /* Main.xcdatamodeld in Sources */,
+				C834C4792AE9EEC00015A3C4 /* DetailView.swift in Sources */,
+				C834C4732AE9E9230015A3C4 /* DataController.swift in Sources */,
+				C834C4772AE9EEA90015A3C4 /* SidebarView.swift in Sources */,
 				C80DD37A2AE95302006F3E7F /* ContentView.swift in Sources */,
 				C80DD3782AE95302006F3E7F /* Ultimate_PortfolioApp.swift in Sources */,
 			);
@@ -269,12 +293,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Ultimate Portfolio/Ultimate Portfolio.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Ultimate Portfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = 7AGNJTPT6V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Ultimate-Portfolio-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -298,12 +324,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Ultimate Portfolio/Ultimate Portfolio.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Ultimate Portfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = 7AGNJTPT6V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Ultimate-Portfolio-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +372,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C834C46F2AE9E6FC0015A3C4 /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C834C4702AE9E6FC0015A3C4 /* Main.xcdatamodel */,
+			);
+			currentVersion = C834C4702AE9E6FC0015A3C4 /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C80DD36C2AE95302006F3E7F /* Project object */;
 }
