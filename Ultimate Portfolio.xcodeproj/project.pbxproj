@@ -16,6 +16,8 @@
 		C834C4772AE9EEA90015A3C4 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C834C4762AE9EEA90015A3C4 /* SidebarView.swift */; };
 		C834C4792AE9EEC00015A3C4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C834C4782AE9EEC00015A3C4 /* DetailView.swift */; };
 		C834C47B2AE9EF7A0015A3C4 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C834C47A2AE9EF7A0015A3C4 /* Filter.swift */; };
+		C834C4852AE9F5D60015A3C4 /* Issue-DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C834C4842AE9F5D60015A3C4 /* Issue-DataHelper.swift */; };
+		C834C4872AE9F6A80015A3C4 /* Tag-DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C834C4862AE9F6A80015A3C4 /* Tag-DataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		C834C4762AE9EEA90015A3C4 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		C834C4782AE9EEC00015A3C4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		C834C47A2AE9EF7A0015A3C4 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		C834C4842AE9F5D60015A3C4 /* Issue-DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Issue-DataHelper.swift"; sourceTree = "<group>"; };
+		C834C4862AE9F6A80015A3C4 /* Tag-DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-DataHelper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				C834C4782AE9EEC00015A3C4 /* DetailView.swift */,
 				C834C4722AE9E9230015A3C4 /* DataController.swift */,
 				C834C46F2AE9E6FC0015A3C4 /* Main.xcdatamodeld */,
+				C834C4842AE9F5D60015A3C4 /* Issue-DataHelper.swift */,
+				C834C4862AE9F6A80015A3C4 /* Tag-DataHelper.swift */,
 				C80DD37B2AE95304006F3E7F /* Assets.xcassets */,
 				C80DD37D2AE95304006F3E7F /* Preview Content */,
 			);
@@ -158,8 +164,10 @@
 			files = (
 				C834C47B2AE9EF7A0015A3C4 /* Filter.swift in Sources */,
 				C834C4712AE9E6FC0015A3C4 /* Main.xcdatamodeld in Sources */,
+				C834C4852AE9F5D60015A3C4 /* Issue-DataHelper.swift in Sources */,
 				C834C4792AE9EEC00015A3C4 /* DetailView.swift in Sources */,
 				C834C4732AE9E9230015A3C4 /* DataController.swift in Sources */,
+				C834C4872AE9F6A80015A3C4 /* Tag-DataHelper.swift in Sources */,
 				C834C4772AE9EEA90015A3C4 /* SidebarView.swift in Sources */,
 				C80DD37A2AE95302006F3E7F /* ContentView.swift in Sources */,
 				C80DD3782AE95302006F3E7F /* Ultimate_PortfolioApp.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  Issue-CoreDataHelpers.swift
+//  Issue-DataHelper.swift
 //  Ultimate Portfolio
 //
 //  Created by Kuba Milcarz on 10/25/23.
@@ -27,6 +27,12 @@ extension Issue {
         modificationDate ?? .now
     }
     
+    var issueTags: [Tag] {
+        let result = tags?.allObjects as? [Tag] ?? []
+        
+        return result.sorted()
+    }
+    
     static var example: Issue {
         let controller = DataController(inMemory: true)
         let viewContext = controller.container.viewContext
@@ -38,5 +44,18 @@ extension Issue {
         issue.creationDate = .now
         
         return issue
+    }
+}
+
+extension Issue: Comparable {
+    public static func <(lhs: Issue, rhs: Issue) -> Bool {
+        let left = lhs.issueTitle.localizedLowercase
+        let right = rhs.issueTitle.localizedLowercase
+        
+        if left == right {
+            return lhs.issueCreationDate < rhs.issueCreationDate
+        } else {
+            return left < right
+        }
     }
 }
