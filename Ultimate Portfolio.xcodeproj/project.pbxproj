@@ -18,6 +18,7 @@
 		C834C47B2AE9EF7A0015A3C4 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C834C47A2AE9EF7A0015A3C4 /* Filter.swift */; };
 		C834C4852AE9F5D60015A3C4 /* Issue-DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C834C4842AE9F5D60015A3C4 /* Issue-DataHelper.swift */; };
 		C834C4872AE9F6A80015A3C4 /* Tag-DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C834C4862AE9F6A80015A3C4 /* Tag-DataHelper.swift */; };
+		C8DB7D282AEB366E001CE0C4 /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB7D272AEB366E001CE0C4 /* IssueRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C834C47A2AE9EF7A0015A3C4 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		C834C4842AE9F5D60015A3C4 /* Issue-DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Issue-DataHelper.swift"; sourceTree = "<group>"; };
 		C834C4862AE9F6A80015A3C4 /* Tag-DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-DataHelper.swift"; sourceTree = "<group>"; };
+		C8DB7D272AEB366E001CE0C4 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				C80DD3772AE95302006F3E7F /* Ultimate_PortfolioApp.swift */,
 				C834C47A2AE9EF7A0015A3C4 /* Filter.swift */,
 				C834C4762AE9EEA90015A3C4 /* SidebarView.swift */,
+				C8DB7D272AEB366E001CE0C4 /* IssueRow.swift */,
 				C80DD3792AE95302006F3E7F /* ContentView.swift */,
 				C834C4782AE9EEC00015A3C4 /* DetailView.swift */,
 				C834C4722AE9E9230015A3C4 /* DataController.swift */,
@@ -170,6 +173,7 @@
 				C834C4872AE9F6A80015A3C4 /* Tag-DataHelper.swift in Sources */,
 				C834C4772AE9EEA90015A3C4 /* SidebarView.swift in Sources */,
 				C80DD37A2AE95302006F3E7F /* ContentView.swift in Sources */,
+				C8DB7D282AEB366E001CE0C4 /* IssueRow.swift in Sources */,
 				C80DD3782AE95302006F3E7F /* Ultimate_PortfolioApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
