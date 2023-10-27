@@ -27,10 +27,25 @@ extension Issue {
         modificationDate ?? .now
     }
     
+    var issueStatus: String {
+        completed ? "Closed" : "Open"
+    }
+    
     var issueTags: [Tag] {
         let result = tags?.allObjects as? [Tag] ?? []
         
         return result.sorted()
+    }
+    
+    var issueTagsList: String {
+        guard let tags else { return "No tags" }
+        
+        // NSSet, so can't do .isEmpty
+        if tags.count == 0 {
+            return "No tags"
+        } else {
+            return issueTags.map(\.tagName).formatted()
+        }
     }
     
     static var example: Issue {
