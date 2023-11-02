@@ -13,11 +13,11 @@
 			<key>NSStringFormatValueTypeKey</key>
 			<string>lld</string>
 			<key>zero</key>
-			<string>No issues</string>
+			<string>Brak problemów</string>
 			<key>one</key>
-			<string>1 issue</string>
+			<string>1 problem</string>
 			<key>other</key>
-			<string>%lld issues</string>
+			<string>%lld problemy</string>
 		</dict>
 	</dict>
 </dict>

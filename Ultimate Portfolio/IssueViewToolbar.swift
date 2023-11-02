@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct IssueViewToolbar: View {
+    @EnvironmentObject var dataController: DataController
+    @ObservedObject var issue: Issue
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Menu {
+            Button("Copy Issue Title", systemImage: "doc.on.doc") {
+                // MARK: Copy/Paste Clipboard
+                UIPasteboard.general.string = issue.title
+            }
+
+            Button(issue.completed ? "Re-open Issue" : "Close Issue",
+                   systemImage: "bubble.left.and.exclamationmark.bubble.right") {
+                issue.completed.toggle()
+                dataController.save()
+            }
+        } label: {
+            Label("Actions", systemImage: "ellipsis.circle")
+        }
     }
 }
 
 #Preview {
-    IssueViewToolbar()
+    IssueViewToolbar(issue: Issue.example)
 }

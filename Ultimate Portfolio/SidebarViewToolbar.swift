@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct SidebarViewToolbar: View {
+    @EnvironmentObject var dataController: DataController
+    @Binding var showingAwards: Bool
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: dataController.newTag) {
+            Label("Add tag", systemImage: "plus")
+        }
+
+        Button("Showing awards", systemImage: "rosette") {
+            showingAwards.toggle()
+        }
+
+        #if DEBUG
+        Button("Add Samples", systemImage: "flame") {
+            dataController.deleteAll()
+            dataController.createSampleData()
+        }
+        #endif
     }
 }
 
 #Preview {
-    SidebarViewToolbar()
+    SidebarViewToolbar(showingAwards: .constant(true))
 }

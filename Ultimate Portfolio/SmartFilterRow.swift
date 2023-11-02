@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct SmartFilterRow: View {
+    var filter: Filter
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationLink(value: filter) {
+            Label(LocalizedStringKey(filter.name), systemImage: filter.icon)
+        }
     }
 }
 
 #Preview {
-    SmartFilterRow()
+    SmartFilterRow(filter: .all)
 }

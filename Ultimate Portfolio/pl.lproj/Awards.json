@@ -1,159 +1,159 @@
 [
     {
-        "name": "First Steps",
-        "description": "Add your first issue.",
+        "name": "Pierwsze kroki",
+        "description": "Dodaj swój pierwszy problem.",
         "color": "Light Blue",
         "criterion": "issues",
         "value": 1,
         "image": "figure.walk"
     },
     {
-        "name": "A Great Start",
-        "description": "Add 10 issues.",
+        "name": "Wielki Start",
+        "description": "Dodaj 10 problemów.",
         "color": "Light Blue",
         "criterion": "issues",
         "value": 10,
         "image": "hand.thumbsup.fill"
     },
     {
-        "name": "Moving On Up",
-        "description": "Add 20 issues.",
+        "name": "Posuwanie się naprzód",
+        "description": "Dodaj 20 problemów.",
         "color": "Light Blue",
         "criterion": "issues",
         "value": 20,
         "image": "tray.and.arrow.up.fill"
     },
     {
-        "name": "Gathering Speed",
-        "description": "Add 50 issues.",
+        "name": "Zbieranie prędkości",
+        "description": "Dodaj 50 problemów.",
         "color": "Light Blue",
         "criterion": "issues",
         "value": 50,
         "image": "speedometer"
     },
     {
-        "name": "Making Waves",
-        "description": "Add 100 issues.",
+        "name": "Robienie fal",
+        "description": "Dodaj 100 problemów.",
         "color": "Light Blue",
         "criterion": "issues",
         "value": 100,
         "image": "dot.radiowaves.left.and.right"
     },
     {
-        "name": "High Performer",
-        "description": "Add 250 issues.",
+        "name": "Wysoki wykonawca",
+        "description": "Dodaj 250 problemów.",
         "color": "Light Blue",
         "criterion": "issues",
         "value": 250,
         "image": "square.stack.3d.up.fill"
     },
     {
-        "name": "Star Performer",
-        "description": "Add 500 issues.",
+        "name": "Wydajny wykonawca",
+        "description": "Dodaj 500 problemów.",
         "color": "Light Blue",
         "criterion": "issues",
         "value": 500,
         "image": "star.circle.fill"
     },
     {
-        "name": "Champion Performer",
-        "description": "Add 1000 issues.",
+        "name": "Mistrzowski wykonawca",
+        "description": "Dodaj 1000 problemów.",
         "color": "Light Blue",
         "criterion": "issues",
         "value": 1000,
         "image": "crown.fill"
     },
     {
-        "name": "Checking Boxes",
-        "description": "Close your first issue.",
+        "name": "Zaznaczanie pól",
+        "description": "Zamknij swój pierwszy problem.",
         "color": "Green",
         "criterion": "closed",
         "value": 1,
         "image": "checkmark.shield.fill"
     },
     {
-        "name": "Rocking it",
-        "description": "Close 10 issues.",
+        "name": "Świetna robota",
+        "description": "Zamknij 10 problemów.",
         "color": "Green",
         "criterion": "closed",
         "value": 10,
         "image": "guitars.fill"
     },
     {
-        "name": "20 is Plenty",
-        "description": "Close 20 issues.",
+        "name": "20 to wystarczająco",
+        "description": "Zamknij 20 problemów.",
         "color": "Green",
         "criterion": "closed",
         "value": 20,
         "image": "20.square.fill"
     },
     {
-        "name": "Bullseye!",
-        "description": "Close 50 issues.",
+        "name": "Cel w dziesiątkę!",
+        "description": "Zamknij 50 problemów.",
         "color": "Green",
         "criterion": "closed",
         "value": 50,
         "image": "target"
     },
     {
-        "name": "Flying High",
-        "description": "Close 100 issues.",
+        "name": "Wysoko w górę",
+        "description": "Zamknij 100 problemów.",
         "color": "Green",
         "criterion": "closed",
         "value": 100,
         "image": "airplane.circle.fill"
     },
     {
-        "name": "You're On Fire!",
-        "description": "Close 250 issues.",
+        "name": "Jesteś na ogniu!",
+        "description": "Zamknij 250 problemów.",
         "color": "Green",
         "criterion": "closed",
         "value": 250,
         "image": "flame.fill"
     },
     {
-        "name": "Box Ticker in Chief",
-        "description": "Close 500 issues.",
+        "name": "Mistrz zaznaczania pól",
+        "description": "Zamknij 500 problemów.",
         "color": "Green",
         "criterion": "closed",
         "value": 500,
         "image": "text.badge.checkmark"
     },
     {
-        "name": "Boom!",
-        "description": "Close 1000 issues.",
+        "name": "Bum!",
+        "description": "Zamknij 1000 problemów.",
         "color": "Green",
         "criterion": "closed",
         "value": 1000,
         "image": "bolt.circle.fill"
     },
     {
-        "name": "Playing tag",
-        "description": "You created your first tag.",
+        "name": "Baw się w tagi",
+        "description": "Utworzyłeś swój pierwszy tag.",
         "color": "Gold",
         "criterion": "tags",
         "value": 1,
         "image": "tag.fill"
     },
     {
-        "name": "Tag wrestling",
-        "description": "You've created 10 tags.",
+        "name": "Rozgrywanie tagów",
+        "description": "Utworzyłeś 10 tagów.",
         "color": "Gold",
         "criterion": "tags",
         "value": 10,
         "image": "tag.circle.fill"
     },
     {
-        "name": "Supreme tagger",
-        "description": "You've created 50 tags.",
+        "name": "Tagowy mistrz",
+        "description": "Utworzyłeś 50 tagów.",
         "color": "Gold",
         "criterion": "tags",
         "value": 50,
         "image": "square.grid.3x1.folder.fill.badge.plus"
     },
     {
-        "name": "Supporter",
-        "description": "You bought the premium unlock.",
+        "name": "Wsparcie",
+        "description": "Kupiłeś odblokowanie premium.",
         "color": "Purple",
         "criterion": "unlock",
         "value": 0,

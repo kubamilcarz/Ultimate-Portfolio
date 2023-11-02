@@ -9,14 +9,14 @@ import SwiftUI
 
 struct AwardsView: View {
     @EnvironmentObject var dataController: DataController
-    
+
     @State private var selectedAward = Award.example
     @State private var showingAwardDetails = false
-    
+
     var columns: [GridItem] {
         [GridItem(.adaptive(minimum: 90, maximum: 90))]
     }
-    
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -31,9 +31,9 @@ struct AwardsView: View {
                                 .scaledToFit()
                                 .padding()
                                 .frame(width: 90, height: 90)
-                                .foregroundStyle(dataController.hasEarned(award: award) ? Color(award.color) : Color.secondary.opacity(0.5))
+                                .foregroundStyle(color(for: award))
                         }
-                        .accessibilityLabel(dataController.hasEarned(award: award) ? "Unlocked: \(award.name)" : "Locked")
+                        .accessibilityLabel(label(for: award))
                         .accessibilityHint(award.description)
                     }
                 }
@@ -41,18 +41,26 @@ struct AwardsView: View {
             .navigationTitle("Awards")
         }
         .alert(awardTitle, isPresented: $showingAwardDetails) {
-            
+
         } message: {
             Text(selectedAward.description)
         }
     }
-    
+
     var awardTitle: String {
         if dataController.hasEarned(award: selectedAward) {
             return "Unlocked: \(selectedAward.name)"
         } else {
             return "Locked"
         }
+    }
+
+    func color(for award: Award) -> Color {
+        dataController.hasEarned(award: award) ? Color(award.color) : Color.secondary.opacity(0.5)
+    }
+
+    func label(for award: Award) -> LocalizedStringKey {
+        dataController.hasEarned(award: award) ? "Unlocked: \(award.name)" : "Locked"
     }
 }
 
