@@ -5,31 +5,63 @@
 //  Created by Kuba Milcarz on 11/2/23.
 //
 
+import CoreData
 import XCTest
+@testable import Ultimate_Portfolio
 
 final class AwardsTest: BaseTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    let awards = Award.allAwards
+    
+    func testAwardIDMatchesName() {
+        for award in awards {
+            XCTAssertEqual(award.id, award.name, "Award ID should always match its name.")
         }
     }
-
+    
+    func testNewUserHasUnlockedNoAwards() {
+        for award in awards {
+            XCTAssertFalse(dataConroller.hasEarned(award: award), "New users should have no earned awards.")
+        }
+    }
+    
+    func testCreatingIssuesUnlocksAwards() {
+        let values = [1, 10, 20, 50, 100, 250, 500, 1000]
+        
+        for (count, value) in values.enumerated() {
+            var issues = [Issue]()
+            
+            for _ in 0..<value {
+                let issue = Issue(context: managedObjectContext)
+                issues.append(issue)
+            }
+            
+            let matches = awards.filter { award in
+                award.criterion == "issues" && dataConroller.hasEarned(award: award)
+            }
+            
+            XCTAssertEqual(matches.count, count + 1, "Adding \(value) issues should unlock \(count + 1) awards.")
+            dataConroller.deleteAll()
+        }
+    }
+    
+    func testClosingIssuesUnlocksAwards() {
+        let values = [1, 10, 20, 50, 100, 250, 500, 1000]
+        
+        for (count, value) in values.enumerated() {
+            var issues = [Issue]()
+            
+            for _ in 0..<value {
+                let issue = Issue(context: managedObjectContext)
+                issue.completed = true
+                issues.append(issue)
+            }
+            
+            let matches = awards.filter { award in
+                award.criterion == "closed" && dataConroller.hasEarned(award: award)
+            }
+            
+            XCTAssertEqual(matches.count, count + 1, "Closing \(value) issues should unlock \(count + 1) awards.")
+            dataConroller.deleteAll()
+        }
+    }
 }

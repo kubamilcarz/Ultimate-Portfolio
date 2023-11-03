@@ -9,7 +9,6 @@
     }
   ],
   "defaultOptions" : {
-    "codeCoverage" : false,
     "targetForVariableExpansion" : {
       "containerPath" : "container:Ultimate Portfolio.xcodeproj",
       "identifier" : "C80DD3732AE95302006F3E7F",
