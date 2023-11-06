@@ -16,7 +16,7 @@ struct SidebarViewToolbar: View {
             Label("Add tag", systemImage: "plus")
         }
 
-        Button("Showing awards", systemImage: "rosette") {
+        Button("Show awards", systemImage: "rosette") {
             showingAwards.toggle()
         }
 

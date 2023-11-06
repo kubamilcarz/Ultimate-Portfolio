@@ -109,6 +109,7 @@
 		C834C47A2AE9EF7A0015A3C4 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		C834C4842AE9F5D60015A3C4 /* Issue-DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Issue-DataHelper.swift"; sourceTree = "<group>"; };
 		C834C4862AE9F6A80015A3C4 /* Tag-DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-DataHelper.swift"; sourceTree = "<group>"; };
+		C8A28BEC2AF9451400B86ECE /* Ultimate PortfolioUITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Ultimate PortfolioUITests.xctestplan"; sourceTree = "<group>"; };
 		C8DB7D272AEB366E001CE0C4 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
 		C8DB7D292AEB40AB001CE0C4 /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		C8DB7D2B2AEB40BC001CE0C4 /* NoIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoIssueView.swift; sourceTree = "<group>"; };
@@ -152,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				C800AF482AF93AD7004D0913 /* Ultimate_PortfolioUITests.swift */,
+				C8A28BEC2AF9451400B86ECE /* Ultimate PortfolioUITests.xctestplan */,
 				C800AF4A2AF93AD7004D0913 /* Ultimate_PortfolioUITestsLaunchTests.swift */,
 			);
 			path = "Ultimate PortfolioUITests";
