@@ -60,10 +60,6 @@ extension Issue {
 
         return issue
     }
-
-    var issueFormattedCreationDate: String {
-        issueCreationDate.formatted(date: .numeric, time: .omitted)
-    }
 }
 
 extension Issue: Comparable {
