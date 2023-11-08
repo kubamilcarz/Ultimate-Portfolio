@@ -96,9 +96,9 @@ final class Ultimate_PortfolioUITests: XCTestCase {
         
         for award in app.scrollViews.buttons.allElementsBoundByIndex {
             // if the award is not visible on the screen, swipe up slightly
-            if app.windows.element.frame.contains(award.frame) == false {
-                app.swipeUp()
-            }
+//            if app.windows.element.frame.contains(award.frame) == false {
+//                app.swipeUp()
+//            }
             
             award.tap()
             XCTAssertTrue(app.alerts["Locked"].exists, "There should be a Locked alert showing this award")

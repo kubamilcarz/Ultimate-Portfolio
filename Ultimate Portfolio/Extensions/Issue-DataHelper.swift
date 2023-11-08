@@ -34,6 +34,11 @@ extension Issue {
             NSLocalizedString("Open", comment: "This issue is currently unresolved.")
         }
     }
+    
+    var issueReminderTime: Date {
+        get { reminderTime ?? .now }
+        set { reminderTime = newValue }
+    }
 
     var issueTags: [Tag] {
         let result = tags?.allObjects as? [Tag] ?? []
