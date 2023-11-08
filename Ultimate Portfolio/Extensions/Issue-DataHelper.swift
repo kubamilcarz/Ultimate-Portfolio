@@ -28,7 +28,11 @@ extension Issue {
     }
 
     var issueStatus: String {
-        completed ? "Closed" : "Open"
+        if completed {
+            NSLocalizedString("Closed", comment: "This has been resolved by the user")
+        } else {
+            NSLocalizedString("Open", comment: "This issue is currently unresolved.")
+        }
     }
 
     var issueTags: [Tag] {
@@ -38,11 +42,12 @@ extension Issue {
     }
 
     var issueTagsList: String {
-        guard let tags else { return "No tags" }
+        let noTags = NSLocalizedString("No tags", comment: "The user has not created any tags yet.")
+        guard let tags else { return noTags }
 
         // NSSet, so can't do .isEmpty
         if tags.count == 0 {
-            return "No tags"
+            return noTags
         } else {
             return issueTags.map(\.tagName).formatted()
         }
