@@ -80,7 +80,7 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <StoreKitConfigurationFileReference
-         identifier = "../../Ultimate Portfolio/Awards/Configuration.storekit">
+         identifier = "../../Ultimate Portfolio/Configuration/Configuration.storekit">
       </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction

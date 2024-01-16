@@ -27,17 +27,6 @@ class DataController: ObservableObject {
     /// The UserDefaults suite where we're saving user data
     let defaults: UserDefaults
     
-    /// Loads and saves whether our premium unlock has been purchased
-    var fullVersionUnlocked: Bool {
-        get {
-            defaults.bool(forKey: "fullVersionUnlocked")
-        }
-        
-        set {
-            defaults.set(newValue, forKey: "fullVersionUnlocked")
-        }
-    }
-    
     var spotlightDelegate: NSCoreDataCoreSpotlightDelegate?
 
     @Published var selectedFilter: Filter? = .all
@@ -52,6 +41,7 @@ class DataController: ObservableObject {
     @Published var sortType = SortType.dateCreated
     @Published var sortNewestFirst = true
 
+    private var storeTask: Task<Void, Never>?
     private var saveTask: Task<Void, Error>?
 
     static var preview: DataController = {
@@ -98,6 +88,11 @@ class DataController: ObservableObject {
         
         container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
 
+        // as soon as you can start monitoring transactions
+        storeTask = Task {
+            await monitorTransactions()
+        }
+        
         // For testing and previewing purposes we create a
         // temporary, in-memory database by writing to /dev/null
         // so our data is destroyed after the app finishes running.
@@ -289,12 +284,21 @@ class DataController: ObservableObject {
         return allIssues
     }
 
-    func newTag() {
+    func newTag() -> Bool {
+        var shouldCreate = fullVersionUnlocked
+        
+        if shouldCreate == false {
+            shouldCreate = count(for: Tag.fetchRequest()) < 3
+        }
+        
+        guard shouldCreate else { return false }
+        
         let tag = Tag(context: container.viewContext)
         tag.id = UUID()
         tag.name = NSLocalizedString("New tag", comment: "Create a new tag")
 
         save()
+        return true
     }
 
     func newIssue() {

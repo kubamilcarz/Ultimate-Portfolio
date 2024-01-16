@@ -10,18 +10,20 @@
       "internalID" : "4787F2A1",
       "localizations" : [
         {
-          "description" : "",
-          "displayName" : "",
+          "description" : "Get access to the full app.",
+          "displayName" : "Premium Unlock",
           "locale" : "en_US"
         }
       ],
-      "productID" : "com.kubamilcarz.UltimatePortfolio.unlock",
+      "productID" : "com.kubamilcarz.UltimatePortfolio.premiumUnlock",
       "referenceName" : "Unlock Full App",
       "type" : "NonConsumable"
     }
   ],
   "settings" : {
     "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
     "_storeKitErrors" : [
       {
         "current" : null,
