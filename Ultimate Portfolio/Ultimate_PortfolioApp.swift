@@ -10,8 +10,16 @@ import SwiftUI
 
 @main
 struct Ultimate_PortfolioApp: App {
-    @StateObject var dataController = DataController()
+    @StateObject var dataController: DataController
+    @StateObject var unlockManager: UnlockManager
     @Environment(\.scenePhase) var scenePhase
+    
+    init() {
+        let dataController = DataController()
+        
+        self._dataController = StateObject(wrappedValue: dataController)
+        self._unlockManager = StateObject(wrappedValue: UnlockManager(dataController: dataController))
+    }
 
     var body: some Scene {
         WindowGroup {
@@ -24,6 +32,7 @@ struct Ultimate_PortfolioApp: App {
             }
             .environment(\.managedObjectContext, dataController.container.viewContext)
             .environmentObject(dataController)
+            .environmentObject(unlockManager)
             .onChange(of: scenePhase) { phase in
                 if phase != .active {
                     dataController.save()
