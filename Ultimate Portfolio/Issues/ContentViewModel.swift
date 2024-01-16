@@ -13,6 +13,10 @@ extension ContentView {
     class ViewModel: NSObject, ObservableObject, NSFetchedResultsControllerDelegate {
         var dataController: DataController
         
+        var shouldRequesetReview: Bool {
+            dataController.count(for: Tag.fetchRequest()) >= 5
+        }
+        
         init(dataController: DataController) {
             self.dataController = dataController
         }

@@ -13,9 +13,14 @@
           "description" : "Get access to the full app.",
           "displayName" : "Premium Unlock",
           "locale" : "en_US"
+        },
+        {
+          "description" : "Dostań dostęp do pełnej aplikacji.",
+          "displayName" : "Odblokowanie Premium",
+          "locale" : "pl"
         }
       ],
-      "productID" : "com.kubamilcarz.UltimatePortfolio.premiumUnlock",
+      "productID" : "com.kubamilcarz.ultimatePortfolio.premiumUnlock",
       "referenceName" : "Unlock Full App",
       "type" : "NonConsumable"
     }
@@ -26,7 +31,10 @@
     "_storefront" : "USA",
     "_storeKitErrors" : [
       {
-        "current" : null,
+        "current" : {
+          "index" : 2,
+          "type" : "generic"
+        },
         "enabled" : false,
         "name" : "Load Products"
       },

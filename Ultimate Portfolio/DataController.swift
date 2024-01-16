@@ -7,6 +7,7 @@
 
 import CoreData
 import SwiftUI
+import StoreKit
 
 enum SortType: String {
     case dateCreated = "creationDate"
@@ -24,9 +25,6 @@ class DataController: ObservableObject {
     /// The lone CloudKit container used to store our data.
     let container: NSPersistentCloudKitContainer
     
-    /// The UserDefaults suite where we're saving user data
-    let defaults: UserDefaults
-    
     var spotlightDelegate: NSCoreDataCoreSpotlightDelegate?
 
     @Published var selectedFilter: Filter? = .all
@@ -43,6 +41,12 @@ class DataController: ObservableObject {
 
     private var storeTask: Task<Void, Never>?
     private var saveTask: Task<Void, Error>?
+    
+    /// The UserDefaults suite where we're saving user data
+    let defaults: UserDefaults
+    
+    /// StoreKit products we've loaded for the store.
+    @Published var products = [Product]()
 
     static var preview: DataController = {
         let dataController = DataController(inMemory: true)
@@ -343,6 +347,9 @@ class DataController: ObservableObject {
             let fetchRequest = Tag.fetchRequest()
             let awardCount = count(for: fetchRequest)
             return awardCount >= award.value
+            
+        case "unlock":
+            return fullVersionUnlocked
 
         default:
             // an unknown award criterion; this should never be allowed
